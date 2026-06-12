@@ -403,6 +403,15 @@ dispatcher.forward(request, response);
 
 ---
 
+<hr>
+<br>
+<img width="2551" height="1437" alt="image" src="https://github.com/user-attachments/assets/1534dc4d-644c-476d-827f-42b5e453b4c1" />
+<img width="2551" height="1437" alt="image" src="https://github.com/user-attachments/assets/dcb15477-7049-4815-be0a-64fe85b393cf" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5c35c0ce-a762-46f6-9fc8-57aac838352b" />
+<img width="603" height="809" alt="image" src="https://github.com/user-attachments/assets/20a34478-2ae8-4194-8134-1d51cd130505" />
+
+<br>
+
 ## 🔗 관련 링크
 
 - [JSTL Documentation](https://projects.eclipse.org/projects/ee4j.jsp)
