@@ -117,21 +117,15 @@ sequenceDiagram
 기본적인 Servlet 예제입니다.
 
 ```java
-package org.scoula.ex05;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws java.io.IOException {
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
@@ -145,14 +139,12 @@ public class HelloServlet extends HttpServlet {
 Forward를 사용하여 요청을 다른 JSP 페이지로 전달하는 Servlet입니다.
 
 ```java
-package org.scoula.ex05;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "request", value = "/request")
 public class RequestServlet extends HttpServlet {
@@ -390,7 +382,7 @@ dispatcher.forward(request, response);
 ## 📝 기술 스택
 
 - **Language**: Java
-- **Framework**: Jakarta Servlet/JSP
+- **Framework**: Servlet/JSP (javax.servlet)
 - **Template**: JSTL (JSP Standard Tag Library)
 - **Build Tool**: Gradle
 - **Character Encoding**: UTF-8
@@ -423,7 +415,7 @@ dispatcher.forward(request, response);
 ## 👨‍💻 개발 환경
 
 - **JDK**: Java 8 이상
-- **Servlet API**: 4.0
+- **Servlet API**: 4.0 (javax.servlet)
 - **JSTL**: 1.2+
 - **WAS**: Apache Tomcat 9.0+
 - **IDE**: IntelliJ IDEA / Eclipse
@@ -435,3 +427,4 @@ dispatcher.forward(request, response);
 | 버전 | 변경 사항 | 날짜 |
 |------|---------|------|
 | v1.0 | 초기 프로젝트 생성 (JSTL, EL, Forward 예제) | 2026-06-12 |
+| v1.1 | 코드 예제에서 javax 패키지로 수정 | 2026-06-12 |
